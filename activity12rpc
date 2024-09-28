@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class activity12rpc {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Player 1, enter your choice (Rock, Paper, Scissor): ");
+        String player1 = scan.next();
+
+        System.out.print("Player 2, enter your choice (Rock, Paper, Scissor): ");
+        String player2 = scan.next();
+
+        System.out.println("Player 1: " + player1);
+        System.out.println("Player 2: " + player2);
+
+        if (player1.equalsIgnoreCase("Rock")) {
+            if (player2.equalsIgnoreCase("Scissor")) {
+                System.out.println("Player 1 wins the game!");
+            } else if (player2.equalsIgnoreCase("Paper")) {
+                System.out.println("Player 2 wins the game!");
+            } else {
+                System.out.println("It's a tie!");
+            }
+        } else if (player1.equalsIgnoreCase("Paper")) {
+            if (player2.equalsIgnoreCase("Rock")) {
+                System.out.println("Player 1 wins the game!");
+            } else if (player2.equalsIgnoreCase("Scissor")) {
+                System.out.println("Player 2 wins the game!");
+            } else {
+                System.out.println("It's a tie!");
+            }
+        } else if (player1.equalsIgnoreCase("Scissor")) {
+            if (player2.equalsIgnoreCase("Paper")) {
+                System.out.println("Player 1 wins the game!");
+            } else if (player2.equalsIgnoreCase("Rock")) {
+                System.out.println("Player 2 wins the game!");
+            } else {
+                System.out.println("It's a tie!");
+            }
+        } else {
+            System.out.println("Invalid input. Please enter Rock, Paper, or Scissor.");
+        }
+    }
+}
